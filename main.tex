@@ -1,0 +1,115 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = ru_RU
+\documentclass[a4paper,14pt]{extarticle} %размер бумаги устанавливаем А4, шрифт 14пунктов
+\usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float} %подключаем нужные пакеты расширений
+\usepackage[T2A, T1]{fontenc}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}%включаем свою кодировку: koi8-r или utf8 в UNIX, cp1251 в Windows
+\usepackage[english, russian]{babel}%используем русский и английский языки с переносами
+
+\usepackage{graphicx} %хотим вставлять в диплом рисунки?
+\graphicspath{{images/}}%путь к рисункам
+
+%{tikz}
+\usepackage{pgfplots}
+
+\usepackage{listings}
+\lstset{
+	frame=single,
+	breaklines=true
+}
+\lstset{language=C++,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\color{green}\ttfamily,
+	morecomment=[l][\color{magenta}]{\#}
+}
+
+\usepackage[colorlinks=false,pdfborder={0 0 0}]{hyperref} %использование гиперссылок, colorlinks - цвет текста ссылки, pdfborder - окантовка. 
+
+%шрифт Times New Roman
+%\usepackage{fontspec}
+%\setmainfont{Times New Roman}
+%\setallmainfonts{Times New Roman}
+
+\usepackage{titlesec}
+\titleformat{\section}[block]
+{\filcenter\large}
+{\thesection}
+{1em}{\MakeUppercase}
+\titlespacing*{\section}{0pt}{-30pt}{*4}
+
+\makeatletter
+%\renewcommand{\@biblabel}[1]{#1.} % Заменяем библиографию с квадратных скобок на точку:
+\makeatother
+
+
+\usepackage{geometry} % Меняем поля страницы
+\geometry{left=3cm}% левое поле
+\geometry{right=15mm}% правое поле
+\geometry{top=2cm}% верхнее поле
+\geometry{bottom=2cm}% нижнее поле
+\linespread{1.5}
+
+\usepackage{indentfirst} % отделять первую строку раздела абзацным отступом
+\setlength\parindent{5ex}
+
+%links
+\usepackage{url}
+
+\usepackage[tableposition=top,singlelinecheck=false, justification=centering]{caption}
+\usepackage{subcaption}
+
+%  маркированные списки
+\renewcommand{\labelitemi}{--}
+\renewcommand{\labelitemii}{--}
+%  нумерованные списки
+\renewcommand{\labelenumi}{\asbuk{enumi})}
+\renewcommand{\labelenumii}{\arabic{enumii})}
+
+% номер сноски со скобкой
+\renewcommand*{\thefootnote}{\arabic{footnote})}
+\renewcommand{\footnoterule}{%
+	\kern -3pt
+	\hrule width 40mm height .4pt
+	\kern 2.6pt
+}
+
+%иллюстрации и таблицы
+\DeclareCaptionLabelFormat{gostfigure}{Рисунок #2}
+\DeclareCaptionLabelFormat{gosttable}{Таблица #2}
+\DeclareCaptionLabelSeparator{gost}{~---~}
+\captionsetup{labelsep=gost}
+\captionsetup*[figure]{labelformat=gostfigure}
+\captionsetup*[table]{labelformat=gosttable}
+\renewcommand{\thesubfigure}{\asbuk{subfigure}}
+
+
+%\renewcommand{\rmdefault}{ftm}
+\renewcommand{\figurename}{Рисунок} % Рис -> Рисунок
+%\usepackage[labelsep=period,labelfont=bf,figurename={Рисунок},figurewithin=none]{caption}
+\renewcommand{\theenumi}{\arabic{enumi}}% Меняем везде перечисления на цифра.цифра
+\renewcommand{\labelenumi}{\arabic{enumi}}% Меняем везде перечисления на цифра.цифра
+\renewcommand{\theenumii}{.\arabic{enumii}}% Меняем везде перечисления на цифра.цифра
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}% Меняем везде перечисления на цифра.цифра
+\renewcommand{\theenumiii}{.\arabic{enumiii}}% Меняем везде перечисления на цифра.цифра
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}% Меняем везде перечисления на цифра.цифра
+
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+%\renewcommand{\cfttoctitlefont}{\Large\filcenter}
+
+%\setcounter{page}{2} %нумерация страниц с 3
+%\addto\captionsrussian{\renewcommand\contentsname{СОДЕРЖАНИЕ}}
+%\addto\captionsrussian{\renewcommand\refname{СПИСОК ИСПОЛЬЗОВАНЫХ ИСТОЧНИКОВ}}
+
+
+
+\begin{document}
+	\input{ust_awgn}
+	\input{ust_error}
+	%	\bibliographystyle{gost2008l}  %% стилевой файл для оформления по ГОСТу
+	%	\bibliography{biblio}     %% имя библиографической базы (bib-файла) 
+		\addcontentsline{toc}{subsection}{Список использованных источников}
+\end{document}
