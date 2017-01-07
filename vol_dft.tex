@@ -1,0 +1,47 @@
+\subsection{Дискретное преобразование Фурье}
+Дискретное преобразование Фурье (ДПФ) --- инструмент спектрального анализа сигналов. ДПФ позволяет сопоставить сигналу во временной области эквивалентное представление в частотной области.
+Данное преобразование ставит в соответствие \(N\) отсчетам сигнала \(s(n), n = 0, 1 \dots N-1,  N\) отсчетов комплексного \(S_d(k), k = 0 \dots N-1 \).
+
+Формула преобразования имеет следующий вид:
+\begin{equation}
+    S(k) = \sum_{n=0}^{N-1} s(n) \cdot e^{-j \cdot \dfrac{2\pi}{N} \cdot n \cdot k}, k = 0 \dots N-1
+\end{equation}
+
+Согласно формуле Эйлера \(e^{jx} = \cos(x) + j\sin(x)\) преобразование Фурье может быть представлено в следующем виде:
+\begin{equation} \label{eq:DFT_cos}
+    S(k) = \sum_{n=0}^{N-1} s(n) \cdot (\cos(\dfrac{2\pi}{N} \cdot n \cdot k) - j \sin(\dfrac{2\pi}{N} \cdot n \cdot k))
+\end{equation}
+
+В качестве примера рассмотрим вектор чисел размером \(N = 8 \)
+\begin{equation*}
+    s(n) = [0.5, 0.2, 0, 0, 0, 0, 0, 0]
+\end{equation*}
+Согласно формуле (\ref{eq:DFT_cos}) данный вектор поэлементно умножается на \(\cos\) и \(\sin\):
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c}
+        k = 0: \(cos(0) - j \cdot sin(0)\); \\
+        k = 1: \(cos(\dfrac{2\pi}{N} \cdot n) - j \cdot sin(\dfrac{2\pi}{N} \cdot n);\) \\
+        k = 2: \(cos(\dfrac{2\pi}{N} \cdot 2 \cdot n) - j \cdot sin(\dfrac{2\pi}{N} \cdot 2 \cdot n);\)  \\
+        k = 3: \(cos(\dfrac{2\pi}{N} \cdot 3 \cdot n) - j \cdot sin(\dfrac{2\pi}{N} \cdot 3 \cdot  n);\) \\
+        k = 4: \(cos(\dfrac{2\pi}{N} \cdot 4 \cdot n) - j \cdot sin(\dfrac{2\pi}{N} \cdot 4 \cdot n);\)  \\
+        k = 5: \(cos(\dfrac{2\pi}{N} \cdot 5 \cdot n) - j \cdot sin(\dfrac{2\pi}{N} \cdot 5 \cdot n);\) \\
+        k = 6: \(cos(\dfrac{2\pi}{N} \cdot 6 \cdot n) - j \cdot sin(\dfrac{2\pi}{N} \cdot 6 \cdot n);\)  \\
+        k = 7: \(cos(\dfrac{2\pi}{N} \cdot 7 \cdot n) - j \cdot sin(\dfrac{2\pi}{N} \cdot 7 \cdot n);\) \\
+    \end{tabular}
+\end{table}
+В результате такого перемножения будет получен следующий вектор:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ll}
+        \(S(n) = [\) & 
+        \(0.7 + j \cdot 0\); \\
+        & \(0.6414 - j \cdot 0.1414\); \\
+        & \(0.5 - j \cdot 0.2\); \\
+        & \(0.3586 - j \cdot 0.1414\); \\
+        & \(0.3 + j \cdot 0\); \\
+        & \(0.3586 + j \cdot 0.1414\); \\
+        & \(0.5 + j \cdot 0.2\); \\
+        & \(0.6414 + j \cdot 0.1414]\); \\
+    \end{tabular}
+\end{table}
