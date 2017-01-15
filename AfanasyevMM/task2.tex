@@ -1,0 +1,31 @@
+\section{Афанасьев. Задание 2}
+
+\textbf{Постановка задачи:}
+Взять неберущийся интеграл:
+$$\int_{0}^{+ \infty}{ \frac{1}{ \sigma \sqrt{2 \pi}} e^{-
+\frac{(x+M)^2}{2 \sigma^2}} dx}$$
+с помощью табулированной функции:
+$$Q(x)= \frac{1}{ \sqrt{2 \pi}} \int_{- \infty}^{x}{e^{-
+\frac{z^2}{2}} dz}.$$
+
+\textbf{Решение:}
+$$
+\int_{0}^{+ \infty}{ \frac{1}{ \sigma \sqrt{2 \pi}} e^{-
+\frac{(x+M)^2}{2 \sigma^2}} dx}=
+\frac{1}{ \sigma \sqrt{2 \pi}} \int_{0}^{+ \infty}{e^{-
+\frac{1}{2} ( \frac{x+M}{ \sigma})^2} dx}=
+\begin{vmatrix}
+z= \frac{x+M}{ \sigma} \\
+dz=z' dx= \frac{1}{ \sigma} dx \\
+dx= \sigma dz \\
+a= \frac{0+M}{ \sigma}= \frac{M}{ \sigma} \\
+b= \frac{+ \infty +M}{ \sigma}=+ \infty
+\end{vmatrix}=
+$$
+$$
+=\frac{1}{ \sigma \sqrt{2 \pi}} \int_{ \frac{M}{ \sigma}}^{+ \infty}{e^{-
+\frac{z^2}{2}} \sigma dz}=
+\frac{1}{ \sqrt{2 \pi}} \int_{ \frac{M}{ \sigma}}^{+ \infty}{e^{-
+\frac{z^2}{2}} dz}=
+Q(+ \infty)-Q \bigg ( \frac{M}{ \sigma} \bigg )
+$$

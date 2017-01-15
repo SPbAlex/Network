@@ -1,0 +1,54 @@
+\section{Афанасьев. Задание 1}
+
+\textbf{Постановка задачи:}
+Пусть $X$ есть н.с.в. заданная функцией распределения:
+$$F(x)=Pr\{ X < x \}=1-e^{-n \lambda x}.$$
+Вычислить математическое ожидание $M[X]$.
+
+\textbf{Решение:}
+$$
+f(x) =
+F'(x) =
+(1-e^{-n \lambda x})' =
+-(e^{-n \lambda x})' =
+-e^{-n \lambda x} (-n \lambda x)' =
+n \lambda e^{-n \lambda x} 
+$$
+$$
+M[X]= \int_{- \infty }^{+ \infty}{x f(x) dx}=
+\int_{0}^{+ \infty}{n \lambda x e^{-n \lambda x} dx}=
+n \lambda \int_{0}^{+ \infty}{x e^{-n \lambda x} dx}=
+$$
+$$
+= \begin{vmatrix}
+t=-n \lambda x \\
+dt=t' dx=-n \lambda dx \\
+dx=- \frac{dt}{n \lambda} \\
+a=-n \lambda \cdot 0=0 \\
+b=-n \lambda \cdot (+ \infty)=- \infty 
+\end{vmatrix}=
+n \lambda \int_{0}^{- \infty}{ \frac{t}{-n \lambda} e^t (- \frac{dt}{n
+\lambda})}=
+n \lambda \int_{0}^{- \infty}{ \frac{t e^t}{(n \lambda)^2} dt}=
+$$
+$$
+= \frac{1}{n \lambda} \int_{0}^{- \infty}{t e^t dt}=
+\begin{vmatrix}
+\int{udv}=uv- \int{vdu} \\
+\begin{matrix}
+u=t & du=u'=1 \\
+dv=e^t & v= \int{v}=e^t
+\end{matrix}
+\end{vmatrix}=
+\frac{1}{n \lambda} \bigg (t e^t- \int{e^t dt} \bigg )  \bigg |_{0}^{-
+\infty}=
+$$
+$$
+= \frac{1}{n \lambda} \bigg (t e^t- e^t \bigg ) \bigg |_{0}^{- \infty}=
+\frac{1}{n \lambda} \bigg (e^t (t-1) \bigg ) \bigg |_{0}^{- \infty}=
+\frac{1}{n \lambda} \bigg (e^{- \infty} (- \infty-1)-e^0 (0-1) \bigg )=
+$$
+$$
+= \frac{1}{n \lambda} \bigg (0-(-1) \bigg )=
+\frac{1}{n \lambda}
+$$
