@@ -1,5 +1,5 @@
 % !TeX encoding = UTF-8
-% !TeX spellcheck = en_US
+% !TeX spellcheck = ru_RU
 \documentclass[a4paper,14pt]{extarticle} %размер бумаги устанавливаем А4, шрифт 14пунктов
 \usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float} %подключаем нужные пакеты расширений
 \usepackage[T2A, T1]{fontenc}
@@ -8,23 +8,7 @@
 \usepackage[english, russian]{babel}%используем русский и английский языки с переносами
 
 \usepackage{graphicx} %хотим вставлять в диплом рисунки?
-\graphicspath{{images/}}%путь к рисункам
-
-%{tikz}
-\usepackage{pgfplots}
-
-\usepackage{listings}
-\lstset{
-	frame=single,
-	breaklines=true
-}
-\lstset{language=C++,
-	basicstyle=\ttfamily,
-	keywordstyle=\color{blue}\ttfamily,
-	stringstyle=\color{red}\ttfamily,
-	commentstyle=\color{green}\ttfamily,
-	morecomment=[l][\color{magenta}]{\#}
-}
+\graphicspath{{img/}}%путь к рисункам
 
 \usepackage[colorlinks=false,pdfborder={0 0 0}]{hyperref} %использование гиперссылок, colorlinks - цвет текста ссылки, pdfborder - окантовка. 
 
@@ -104,18 +88,19 @@
 %\addto\captionsrussian{\renewcommand\contentsname{СОДЕРЖАНИЕ}}
 %\addto\captionsrussian{\renewcommand\refname{СПИСОК ИСПОЛЬЗОВАНЫХ ИСТОЧНИКОВ}}
 
-
+\usepackage{listings}
 
 \begin{document}
+ 	\input{kich_bur_task1}
+ 	\input{kich_bur_sigfox}
 	\input{ust_awgn}
 	\input{ust_error}
 	\input{ust_signals}
     \input{kov_erlang}
     \input{kov_guard_interval}
     \input{kov_frenc}
+    \input{kich_bur_task7}
     \input{vol_guard_interval}
     \input{vol_dft}
-	%	\bibliographystyle{gost2008l}  %% стилевой файл для оформления по ГОСТу
-	%	\bibliography{biblio}     %% имя библиографической базы (bib-файла) 
-		\addcontentsline{toc}{subsection}{Список использованных источников}
+    \addcontentsline{toc}{subsection}{Список использованных источников}
 \end{document}

@@ -1,0 +1,9 @@
+clear;
+h1=25;
+h2=1.6;
+r=6371;
+l1=sqrt(h1*(h1+(2*r)));
+l2=sqrt(h2*(h2+(2*r)));
+L=l1+l2;
+C=pi*r*(atan(l1/r)+atan(l2/r))/180;
+disp(C);
