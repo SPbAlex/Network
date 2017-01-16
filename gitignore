@@ -2,4 +2,6 @@
 .git/
 *.aux
 *.out
+.blg
 *.pdf
+*.gz
