@@ -1,13 +1,16 @@
 % !TeX spellcheck = ru_RU
 % !TeX encoding = UTF-8
-\subsection{Ряд Фурье в комплексной форме}
- ряда Фурь
-\begin{equation}
-	s(t)= \sum s_{k}\varphi_{k}=\sum( a_{k}\cos(2*\pi*f*t)+ b_{k}\sin(2*\pi*f*t))
-	где 
+\section{Ряд Фурье в комплексной форме}
+
+\[
+	s(t)= \sum s_{k}\varphi_{k}=\sum( a_{k}\cos(2*\pi*f*t)+ b_{k}\sin(2*\pi*f*t)),
+\]
+	где:
+\[
 	a_{k}=\dfrac{2}{T}\int{\dfrac{T}{2}}^{-\dfrac{T}{2}} s(t)\cos(2*\pi*\dfrac{k}{T}*t)dt
 	b_{k}=\dfrac{2}{T}\int{\dfrac{T}{2}}^{-\dfrac{T}{2}} s(t)\sin(2*\pi*\dfrac{k}{T}*t)dt
-\end{equation}
+\]
+
 Его  можно  преобразовать  с  использованием  формул  Эйлера  для  тригонометрических
 функций: $2 \cos(x)= \frac{(e^{jx}+e^{-jx})}{2} и \sin(x)= \frac{(e^{jx}-e^{-jx})}{2j} где  j = \sqrt{-1} ,$ то есть
 \begin{equation}

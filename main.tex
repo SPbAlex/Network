@@ -11,30 +11,11 @@
 \graphicspath{{img/}}%путь к рисункам
 
 \usepackage[colorlinks=false,pdfborder={0 0 0}]{hyperref} %использование гиперссылок, colorlinks - цвет текста ссылки, pdfborder - окантовка. 
-
-%шрифт Times New Roman
-%\usepackage{fontspec}
-%\setmainfont{Times New Roman}
-%\setallmainfonts{Times New Roman}
-
-\usepackage{titlesec}
-\titleformat{\section}[block]
-{\filcenter\large}
-{\thesection}
-{1em}{\MakeUppercase}
-\titlespacing*{\section}{0pt}{-30pt}{*4}
-
-\makeatletter
-%\renewcommand{\@biblabel}[1]{#1.} % Заменяем библиографию с квадратных скобок на точку:
-\makeatother
-
-
 \usepackage{geometry} % Меняем поля страницы
 \geometry{left=3cm}% левое поле
 \geometry{right=15mm}% правое поле
 \geometry{top=2cm}% верхнее поле
 \geometry{bottom=2cm}% нижнее поле
-\linespread{1.5}
 
 \usepackage{indentfirst} % отделять первую строку раздела абзацным отступом
 \setlength\parindent{5ex}
@@ -91,22 +72,23 @@
 \usepackage{listings}
  
 \begin{document}
-\input{kich_bur_task7}
+\input{title} \newpage
+\input{kich_bur_task7} \newpage
 \input{AfanasyevMM/task1} \newpage
 \input{AfanasyevMM/task2} \newpage
-\input{ust_awgn} 
+\input{ust_awgn} \newpage
 \input{mal_decibel} \newpage
 \input{ust_signals} \newpage 
-\input{kov_erlang}
-\input{kov_frenc}
-\input{ust_error}
-\input{kich_bur_task1}
-\input{vol_nmt}
+\input{kov_erlang} \newpage
+\input{kov_frenc} \newpage
+\input{ust_error} \newpage
+\input{kich_bur_task1}\newpage
+\input{vol_nmt} \newpage
 \input{vol_dft} \newpage
 \input{mal_noise} \newpage
 \input{mal_con} \newpage
 \input{AfanasyevMM/task4} \newpage
-\input{kov_guard_interval}
-\input{vol_guard_interval}
-    \addcontentsline{toc}{subsection}{Список использованных источников}
+\input{kov_guard_interval} \newpage
+\input{vol_guard_interval} \newpage
+\addcontentsline{toc}{subsection}{Список использованных источников}
 \end{document} 
