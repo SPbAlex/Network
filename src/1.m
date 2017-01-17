@@ -18,7 +18,7 @@ figure
 hist(R, n)
 grid on
 X=min(R):(max(R)-min(R))/n:max(R);
-disp('максимальное число:');
+disp('max number:');
 disp(max(R));
 f= exppdf(X, MU);
 ff=f*n*((max(R)-min(R))/n);
@@ -32,14 +32,14 @@ for i=1:1:n
 k=k+R(1,i);
 k1=k1+RN(1,i);
 end
-disp('матожидание:');
+disp('mat.expect.:');
 disp(k/n);
-disp('дисперсия:');
+disp('disp:');
 disp(var(R));
 
-disp('матожидание для распределения по закону Пуассона:');
+disp('mat.expect. Puasson:');
 disp(k1/n);
-disp('дисперсия для распределения по закону Пуассона:');
+disp('disp Puasson:');
 disp(var(RN));
  
 n1=1;
@@ -62,20 +62,20 @@ if (RN(1,i)-t1)>0
     nr1=nr1+1;
 end;
 end
-disp('матожидание после шага 1:');
+disp('mat.expect. step 1:');
 disp(k/n1);
-disp('количество элементов на второй итерации:');
+disp('number of elements on 2nd iteration:');
 disp(n1);
-disp('дисперсия на второй итерации:');
+disp('2nd iteration disp:');
 disp(var(R1));
-disp('матожидание после шага 1 для Пуассона:');
+disp('mat.expect. step 1 Puasson:');
 disp(k1/nr1);
-disp('количество элементов на второй итерации для Пуассона:');
+disp('number of elements on second iteration Puаsson:');
 disp(nr1);
-disp('дисперсия на второй итерации для Пуассона:');
+disp('disp on second iteration Puasson:');
 disp(var(RN1));
 
-disp('максимальное количество значений');
+disp('max number of elements');
 counts(100)=1;
 counts(~counts)=[];
 counts=(hist(R1,n1));
@@ -118,11 +118,11 @@ if (R1(1,i)-t2)>0
     n2=n2+1;
 end;
 end
-disp('матожидание после шага 3:');
+disp('mat.expect. step 3:');
 disp(k/n2);
-disp('количество элементов на третьей итерации:');
+disp('number of elements step 3:');
 disp(n2);
-disp('дисперсия на третьей итерации:');
+disp('disp step 3:');
 disp(var(R2));
 
 figure
