@@ -7,19 +7,21 @@
 \]
 	где:
 \[
-	a_{k}=\dfrac{2}{T}\int{\dfrac{T}{2}}^{-\dfrac{T}{2}} s(t)\cos(2*\pi*\dfrac{k}{T}*t)dt
-	b_{k}=\dfrac{2}{T}\int{\dfrac{T}{2}}^{-\dfrac{T}{2}} s(t)\sin(2*\pi*\dfrac{k}{T}*t)dt
+	a_{k}=\dfrac{2}{T}\int s(t)\cos(2*\pi*\dfrac{k}{T}*t)dt
+	b_{k}=\dfrac{2}{T}\int s(t)\sin(2*\pi*\dfrac{k}{T}*t)dt
 \]
 
 Его  можно  преобразовать  с  использованием  формул  Эйлера  для  тригонометрических
-функций: $2 \cos(x)= \frac{(e^{jx}+e^{-jx})}{2} и \sin(x)= \frac{(e^{jx}-e^{-jx})}{2j} где  j = \sqrt{-1} ,$ то есть
+функций: $ \cos(x)= \frac{(e^{jx}+e^{-jx})}{2}$ и$ \sin(x)= \frac{(e^{jx}-e^{-jx})}{2j}$ где $ j = \sqrt{-1} ,$ то есть
 \begin{equation}
 s(t)=\sum(s_{k}\varphi_{k})=\sum(a_{k}(\frac{(e^{j2*\pi*f_{k}*t}+e^{-j2*\pi*f_{k}*t})}{2})+b_{k}(\frac{(e^{j2*\pi*f_{k}*t}-e^{-j2*\pi*f_{k}*t})}{2j}))=\sum (\frac{a_{k}-jb_{k}}{2}e^{j2*\pi*f_{k}*t}+\frac{a_{k}+jb_{k}}{2}e^{-j2*\pi*f_{k}*t})
 \end{equation}
-Обозначим коэффициент при $exp(j2*\pi*f_{k}*t) как c_{k}, а коэффициент при exp(-j2*\pi*f_{k}*t) как c_{-k}. $ Очевидно, что $ c_{k}=\frac{a_{k}-jb_{k}}{2} и c_{-k}=\frac{a_{k}+jb_{k}}{2}$ C учетом этих обозначений имеем запись ряда Фурье в комплексной форме
+
+
+Обозначим коэффициент при $exp(j2*\pi*f_{k}*t)$ как $c_{k}$, а коэффициент при$ exp(-j2*\pi*f_{k}*t)$ как $c_{-k}$. Очевидно, что $ c_{k}=\frac{a_{k}-jb_{k}}{2}$ и $c_{-k}=\frac{a_{k}+jb_{k}}{2}$ C учетом этих обозначений имеем запись ряда Фурье в комплексной форме
 \begin{equation}
 s(t)=\sum(c_{k}e^{j2\pi\dfrac{k}{T}t}),
 где
-c_{k}=\frac{a_{k}-jb_{k}}{2}=\frac{1}{T}\int{\dfrac{T}{2}}^{-\dfrac{T}{2}}s(t)e^{-j2\pi\dfrac{k}{T}t}dt.
+c_{k}=\frac{a_{k}-jb_{k}}{2}=\frac{1}{T}\int s(t)e^{-j2\pi\dfrac{k}{T}t}dt.
 \end{equation}
 
