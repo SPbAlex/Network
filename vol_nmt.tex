@@ -7,13 +7,20 @@ AMPS --- широко распространенный стандарт Севе
 
 Стандарты 1G обладали целым рядом недостатков, основным из которых является отсутствие шифрования. Любой абонент имел возможность перехватить данные, передаваемые в канале. К тому же, скорость передачи информации в 1G бала очень низкой (передача голоса 9.1 Kbit/s, передача данных 1.9 Kbit/s), что увеличивало стоимость разговора. Но, благодаря этим недостаткам, намечены векторы развития мобильных сетей.
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|c|c|c|}
-        \hline
-        Поколение & Канал данных & Канал управления\\
-        \hline
-        1G & Аналоговая модуляция & Аналоговая модуляция\\
-        \hline
-    \end{tabular}
+\begin{table}[h!]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|c|l|l|l|l|}
+			\hline
+			\textbf{Поколение}                                                          & \multicolumn{1}{c|}{\textbf{Канал данных}} & \multicolumn{1}{c|}{\textbf{Канал управления}}                          & \multicolumn{1}{c|}{\textbf{Разделение канала}} & \multicolumn{1}{c|}{\textbf{Защита канала}} \\ \hline
+			\begin{tabular}[c]{@{}c@{}}1G\\ (AMPS, TACS, NMT-450, NMT-900)\end{tabular} & Аналоговый                                 & \begin{tabular}[c]{@{}l@{}}FM\\ \\ FDD\end{tabular}                     & FDMA                                            & Отсутствует                                 \\ \hline
+			2G (GSM, CDMAOne)                                                           & Цифровой                                   & \begin{tabular}[c]{@{}l@{}}GMSK\\ \\ FDD\end{tabular}                   & TDMA/CDMA                                       & +                                           \\ \hline
+			2,5G (GPRS)                                                                 & Цифровой                                   & \begin{tabular}[c]{@{}l@{}}GMSK\\ \\ FDD\end{tabular}                   & CDMA                                            & +                                           \\ \hline
+			2,75(EDGE)                                                                  & Цифровой                                   & \begin{tabular}[c]{@{}l@{}}GMSK\\ \\ FDD\end{tabular}                   & CDMA                                            & +                                           \\ \hline
+			3G(UMTS, CDMA2000)                                                          & Цифровой                                   & \begin{tabular}[c]{@{}l@{}}QPSK, 16QAM, 64QAM\\ \\ FDD+TDD\end{tabular} & W-CDMA                                          & +                                           \\ \hline
+			LTE                                                                         & Цифровой                                   & \begin{tabular}[c]{@{}l@{}}QPSK, 16QAM, 64QAM\\ \\ FDD+TDD\end{tabular} & OFDMA                                           & +                                           \\ \hline
+		\end{tabular}%
+	}
+	\caption{Сравнение поколений сетей}
+	\label{net-table}
 \end{table}
