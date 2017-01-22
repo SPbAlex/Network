@@ -70,7 +70,7 @@ disp('2nd iteration disp:');
 disp(var(R1));
 disp('mat.expect. step 1 Puasson:');
 disp(k1/nr1);
-disp('number of elements on second iteration Puаsson:');
+disp('number of elements on second iteration Puasson:');
 disp(nr1);
 disp('disp on second iteration Puasson:');
 disp(var(RN1));

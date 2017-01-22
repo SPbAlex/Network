@@ -41,7 +41,7 @@ for i1=0:Q-1
         grid on;
     end 
 end 
-df = (1/T)/20; % шаги по оси
+df = (1/T)/20;
 f = [max(0,(f0-4/T)) : df : (f0+4/T)];
 figure (nfig);
 nfig=nfig+1;
@@ -243,9 +243,3 @@ PeTheor = 1-(1-2*Qfun( sqrt( (3*SNR)/(q-1) ) )).^2;
 
 semilogy(SNRdB, PeTheor, 'b', 'LineWidth', 2);
 semilogy(SNRdB, PeExp, 'ro-', 'LineWidth', 2);
-  
-
-%semilogy(SNRdB, Pe, 'bo:')
-
-
-
