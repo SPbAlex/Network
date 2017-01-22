@@ -127,8 +127,8 @@ f_5= \frac{2 sin(5 x)}{5 \pi},
 \ref{fig:AfanasyevMM.s(x)_m100_d61}
 продемонстрирован результат обратного преобразования Фурье для
 $s_{m}(x) - s_{d}(x), d < m$. Код matlab, с помощью которого
-были построены эти графики смотрите в листинге ниже.
-%\ref{code:AfanasyevMM.trigonometric_fourier}.
+были построены эти графики смотрите в листинге
+\ref{code:AfanasyevMM.trigonometric_fourier}.
 
 Таким образом видно, что $f_0$ задает постоянный уровень относительно
 которого коллеблются остальные гармоники $f_i$, а сами $f_i$ уже формируют
@@ -203,6 +203,7 @@ $s_{m}(x) - s_{d}(x), d < m$. Код matlab, с помощью которого
 \lstset{language=Matlab,
         basicstyle=\small}
 %\label{code:AfanasyevMM.trigonometric_fourier}
-\lstinputlisting[frame=single,  caption=Листинг программы]
+\lstinputlisting[language=Matlab, frame=single,
+label=code:AfanasyevMM.trigonometric_fourier, caption=Листинг программы]
 {AfanasyevMM/src/trigonometric_fourier.m}
 \newpage
